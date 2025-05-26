@@ -16,7 +16,10 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-purple-300" style={{ textShadow: '0 0 8px rgba(147, 51, 234, 0.3)' }}>
+            <h3
+              className="text-2xl font-bold text-purple-300"
+              style={{ textShadow: '0 0 8px rgba(147, 51, 234, 0.3)' }}
+            >
               BoringBalls™
             </h3>
             <p className="text-gray-500 text-sm leading-relaxed">
@@ -117,7 +120,9 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-green-400" />
-                <span className="text-gray-500 text-sm">boring@boringballs.com</span>
+                <span className="text-gray-500 text-sm">
+                  boring@boringballs.com
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-green-400" />
@@ -126,7 +131,8 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-green-400" />
                 <span className="text-gray-500 text-sm">
-                  123 Mundane St<br />
+                  123 Mundane St
+                  <br />
                   Tedium City, TC 12345
                 </span>
               </div>
@@ -165,10 +171,10 @@ const Footer: React.FC = () => {
                 Cookie Policy
               </motion.a>
             </div>
-            
+
             <div className="text-center">
               <p className="text-gray-500 text-sm">
-                © 2024 BoringBalls™. All rights reserved. 
+                © 2024 BoringBalls™. All rights reserved.
               </p>
               <p className="text-gray-600 text-xs mt-1">
                 Making ping pong boring since the beginning of time.
@@ -189,4 +195,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

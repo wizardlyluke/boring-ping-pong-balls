@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 to-black">
       {/* Animated background grid */}
       <div className="absolute inset-0 retro-bg opacity-10"></div>
-      
+
       {/* Floating geometric shapes */}
       <div className="absolute inset-0">
         <motion.div
@@ -69,15 +69,15 @@ const Hero: React.FC = () => {
           >
             BoringBalls™
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
             className="text-xl md:text-2xl text-blue-300 mb-8 font-mono"
           >
-            <span className="text-green-400">{'>'}</span> The Most Mundane Ping Pong Balls{' '}
-            <span className="text-orange-400">in the Galaxy</span>
+            <span className="text-green-400">{'>'}</span> The Most Mundane Ping
+            Pong Balls <span className="text-orange-400">in the Galaxy</span>
           </motion.div>
 
           <motion.p
@@ -86,9 +86,9 @@ const Hero: React.FC = () => {
             transition={{ delay: 1, duration: 1 }}
             className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Experience peak mediocrity with our regulation-standard, 
-            aggressively ordinary ping pong balls. Each sphere is 
-            meticulously crafted to be as unremarkable as possible.
+            Experience peak mediocrity with our regulation-standard,
+            aggressively ordinary ping pong balls. Each sphere is meticulously
+            crafted to be as unremarkable as possible.
           </motion.p>
 
           <motion.div
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
             >
               SHOP BORING BALLS
             </motion.button>
-            
+
             <motion.button
               className="px-8 py-4 bg-transparent border-2 border-blue-400 text-blue-300 font-bold text-lg rounded-lg hover:bg-blue-900 hover:text-blue-100 transition-all duration-300"
               whileHover={{ scale: 1.02 }}
@@ -144,4 +144,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

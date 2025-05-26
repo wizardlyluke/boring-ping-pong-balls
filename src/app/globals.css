@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #0a0a0a;
@@ -19,14 +19,14 @@ body {
 
 /* Softer neon glow effects */
 .neon-text {
-  text-shadow: 
+  text-shadow:
     0 0 3px currentColor,
     0 0 6px currentColor,
     0 0 10px var(--neon-pink);
 }
 
 .neon-border {
-  box-shadow: 
+  box-shadow:
     0 0 3px currentColor,
     0 0 6px currentColor,
     0 0 10px var(--neon-pink);
@@ -35,7 +35,7 @@ body {
 
 /* Darker retro grid background */
 .retro-bg {
-  background-image: 
+  background-image:
     linear-gradient(rgba(255, 16, 240, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 16, 240, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -49,7 +49,12 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(15, 240, 252, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(15, 240, 252, 0.3),
+    transparent
+  );
   animation: scan-line 3s linear infinite;
   z-index: 1000;
   pointer-events: none;
@@ -85,19 +90,33 @@ body {
 }
 
 @keyframes glitch-1 {
-  0%, 20%, 21%, 80%, 81%, 99%, 100% {
+  0%,
+  20%,
+  21%,
+  80%,
+  81%,
+  99%,
+  100% {
     transform: translate(0);
   }
-  21%, 80% {
+  21%,
+  80% {
     transform: translate(-1px, 1px);
   }
 }
 
 @keyframes glitch-2 {
-  0%, 30%, 31%, 70%, 71%, 99%, 100% {
+  0%,
+  30%,
+  31%,
+  70%,
+  71%,
+  99%,
+  100% {
     transform: translate(0);
   }
-  31%, 70% {
+  31%,
+  70% {
     transform: translate(1px, -1px);
   }
 }

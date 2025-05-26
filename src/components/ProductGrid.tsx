@@ -19,25 +19,36 @@ const products: Product[] = [
     id: 1,
     name: 'Ultra-Boring White Ball',
     price: 2.99,
-    description: 'The epitome of ping pong ball normalcy. So unremarkable, it hurts.',
+    description:
+      'The epitome of ping pong ball normalcy. So unremarkable, it hurts.',
     boringLevel: 5,
-    features: ['100% Regulation Standard', 'Aggressively Round', 'Painfully White'],
+    features: [
+      '100% Regulation Standard',
+      'Aggressively Round',
+      'Painfully White',
+    ],
     inStock: true,
   },
   {
     id: 2,
     name: 'Moderately Dull Orange Ball',
     price: 3.49,
-    description: 'For when white is too exciting. Orange, but not the fun kind.',
+    description:
+      'For when white is too exciting. Orange, but not the fun kind.',
     boringLevel: 4,
-    features: ['Slightly Less Boring', 'Tournament Legal', 'Disappointingly Orange'],
+    features: [
+      'Slightly Less Boring',
+      'Tournament Legal',
+      'Disappointingly Orange',
+    ],
     inStock: true,
   },
   {
     id: 3,
     name: 'Mundane Multi-Pack',
     price: 12.99,
-    description: 'Six balls of pure mediocrity. Buy in bulk to maximize your boredom.',
+    description:
+      'Six balls of pure mediocrity. Buy in bulk to maximize your boredom.',
     boringLevel: 5,
     features: ['6-Pack Value', 'Mixed Boredom Levels', 'Bulk Disappointment'],
     inStock: false,
@@ -46,9 +57,14 @@ const products: Product[] = [
     id: 4,
     name: 'Premium Boring Ball™',
     price: 9.99,
-    description: 'The Rolls-Royce of tedium. Handcrafted to be aggressively unremarkable.',
+    description:
+      'The Rolls-Royce of tedium. Handcrafted to be aggressively unremarkable.',
     boringLevel: 5,
-    features: ['Hand-Crafted Mediocrity', '40mm Regulation', 'Premium Blandness'],
+    features: [
+      'Hand-Crafted Mediocrity',
+      '40mm Regulation',
+      'Premium Blandness',
+    ],
     inStock: true,
   },
   {
@@ -66,7 +82,11 @@ const products: Product[] = [
     price: 29.99,
     description: 'Exists in a superposition of boring and extremely boring.',
     boringLevel: 5,
-    features: ['Quantum Entangled', 'Schrödinger Approved', 'Impossibly Mundane'],
+    features: [
+      'Quantum Entangled',
+      'Schrödinger Approved',
+      'Impossibly Mundane',
+    ],
     inStock: true,
   },
 ];
@@ -94,14 +114,17 @@ const ProductGrid: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold text-blue-300 mb-6" style={{ textShadow: '0 0 8px rgba(59, 130, 246, 0.3)' }}>
+          <h2
+            className="text-5xl font-bold text-blue-300 mb-6"
+            style={{ textShadow: '0 0 8px rgba(59, 130, 246, 0.3)' }}
+          >
             <span className="glitch" data-text="BORING COLLECTION">
               BORING COLLECTION
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Discover our meticulously curated selection of profoundly ordinary ping pong balls.
-            Each one guaranteed to lower your expectations.
+            Discover our meticulously curated selection of profoundly ordinary
+            ping pong balls. Each one guaranteed to lower your expectations.
           </p>
         </motion.div>
 
@@ -116,9 +139,10 @@ const ProductGrid: React.FC = () => {
               onHoverEnd={() => setHoveredProduct(null)}
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-6 hover:border-purple-500/50 transition-all duration-300"
               style={{
-                boxShadow: hoveredProduct === product.id 
-                  ? '0 0 20px rgba(147, 51, 234, 0.2)' 
-                  : '0 0 5px rgba(0, 0, 0, 0.3)',
+                boxShadow:
+                  hoveredProduct === product.id
+                    ? '0 0 20px rgba(147, 51, 234, 0.2)'
+                    : '0 0 5px rgba(0, 0, 0, 0.3)',
               }}
             >
               {/* Product Image Placeholder */}
@@ -138,7 +162,7 @@ const ProductGrid: React.FC = () => {
                   >
                     <div className="absolute inset-2 border border-gray-500 rounded-full opacity-60"></div>
                   </motion.div>
-                  
+
                   {!product.inStock && (
                     <div className="absolute inset-0 bg-red-900/30 flex items-center justify-center">
                       <span className="text-red-400 font-bold text-lg transform -rotate-12">
@@ -147,7 +171,7 @@ const ProductGrid: React.FC = () => {
                     </div>
                   )}
                 </motion.div>
-                
+
                 {hoveredProduct === product.id && (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -161,11 +185,15 @@ const ProductGrid: React.FC = () => {
 
               {/* Product Info */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-purple-300">{product.name}</h3>
-                
+                <h3 className="text-xl font-bold text-purple-300">
+                  {product.name}
+                </h3>
+
                 <div className="flex items-center space-x-2">
                   <span className="text-sm text-gray-500">Boring Level:</span>
-                  <div className="flex space-x-1">{renderStars(product.boringLevel)}</div>
+                  <div className="flex space-x-1">
+                    {renderStars(product.boringLevel)}
+                  </div>
                 </div>
 
                 <p className="text-gray-400 text-sm leading-relaxed">
@@ -185,7 +213,7 @@ const ProductGrid: React.FC = () => {
                   <span className="text-2xl font-bold text-blue-300">
                     ${product.price}
                   </span>
-                  
+
                   <motion.button
                     className={`px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 flex items-center space-x-2 ${
                       product.inStock
@@ -225,4 +253,4 @@ const ProductGrid: React.FC = () => {
   );
 };
 
-export default ProductGrid; 
+export default ProductGrid;
